@@ -1,16 +1,29 @@
 {
-  "name": "mongo-db",
+  "name": "l2-mongo-db",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "rimraf build && tsc -p tsconfig.json",
+    "start": "node build/src/init.js up && node build/index.js up",
+    "build-image": "docker build -t l2_mongodb_image .",
+    "run-container": "docker run -d -p 27017:27017 --name l2_mongodb_container --network l2_network l2_mongodb_image",
+    "drop-ci": "docker rm -f l2_mongodb_container && docker rmi l2_mongodb_image",
+    "images": "docker images | grep l2",
+    "ps": "docker ps -a | grep l2",
+    "clean-restart": "npm run drop-ci && npm run build-image && npm run run-container",
+    "migrate": "npm run build && npm run start",
+    "new": "mongo-migrate new -n",
+    "down": "node build/index.js down --last",
+    "status": "node build/index.js status",
+    "lint-prettier": "eslint '**/*.{js,ts}' --fix && prettier --write '**/*.{js,ts}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git@git.os-tech.ru:l2/mongo-db.git"
   },
-  "author": "",
+  "author": "OS-Tech",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
