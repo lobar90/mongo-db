@@ -1,9 +1,9 @@
 export interface IUser {
-  userID: string
+  userId: string
   firstName: string
   lastName: string
   middleName: string
-  roleID: string
+  roleId: string
   login: string
   password: string
   createDate: string
