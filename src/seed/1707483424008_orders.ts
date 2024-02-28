@@ -9,7 +9,7 @@ export class orders_1707483424008 implements MigrationInterface {
         orderId: '111',
         batchId: '1',
         plannedQty: 100,
-        receiptID: '1',
+        recipeId: '1',
         article: {
           articleId: '81-06501',
           articleName: 'Сыр СЛИВОЧНЫЙ "ПР!СТ" 50% кусок 200г фп',
