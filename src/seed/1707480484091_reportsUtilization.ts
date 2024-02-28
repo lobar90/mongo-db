@@ -1,13 +1,13 @@
 import { Db } from 'mongodb'
 import { MigrationInterface } from 'mongo-migrate-ts'
-import { IReportKM } from '../interfaces/reportKM'
+import { IReportUtilization } from '../interfaces/reportUtilization'
 
-export class reportsKM1707480484091 implements MigrationInterface {
+export class reportsUtilization1707480484091 implements MigrationInterface {
   public async up(db: Db): Promise<void> {
-    const migrationData: IReportKM[] = [
+    const migrationData: IReportUtilization[] = [
       {
         reportId: '1',
-        reportName: '09-02-2024-report_km',
+        reportName: '09-02-2024-report_utilization',
         codes: [
           {
             code: '0101234561234560215lXq)Q\u001d93dGVz',
@@ -17,11 +17,11 @@ export class reportsKM1707480484091 implements MigrationInterface {
       },
     ]
 
-    await db.collection('reports_km').insertMany(migrationData)
+    await db.collection('reports_utilization').insertMany(migrationData)
   }
 
   public async down(db: Db): Promise<void> {
-    await db.collection('reports_km').deleteMany({
+    await db.collection('reports_utilization').deleteMany({
       reportId: {
         $in: ['1'],
       },

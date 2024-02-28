@@ -7,6 +7,7 @@ export class recipes_1707483434404 implements MigrationInterface {
     const migrationData: IRecipe[] = [
       {
         recipeId: '1',
+        recipeName: 'recipeName',
         description: 'description',
         productParameters: {
           length: 100,
