@@ -3,7 +3,7 @@ type Code = {
   status: string,
 }
 
-export interface IReportKM {
+export interface IReportUtilization {
   reportId: string,
   reportName: string,
   codes: Code[]

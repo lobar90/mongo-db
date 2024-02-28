@@ -3,4 +3,5 @@ export interface IMessage {
   type: string
   messageBody: string
   createDate: string
+  resolved: boolean
 }

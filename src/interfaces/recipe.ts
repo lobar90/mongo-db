@@ -42,6 +42,7 @@ interface IProductCategory {
 
 export interface IRecipe {
   recipeId: string
+  recipeName: string
   description: string
   productParameters: IProductParameters
   boxParameters: IBoxParameters
