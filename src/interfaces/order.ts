@@ -14,7 +14,7 @@ export interface IOrder {
   orderId: string
   batchId: string
   plannedQty: number
-  receiptID: string
+  recipeId: string
   article: IArticle
   preprint: boolean
   additionalData:IAdditionalData[]
