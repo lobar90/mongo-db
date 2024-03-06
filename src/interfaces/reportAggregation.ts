@@ -26,7 +26,8 @@ export interface IReportAggregation {
   reportId: string,
   reportName: string,
   orderId: string,
-  createdate: string,
+  description: string,
+  createDate: string,
   palletAggregation?: PalletAggreation[],
   boxAggregation?: BoxAggregation[],
 }

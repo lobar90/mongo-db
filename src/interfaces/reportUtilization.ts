@@ -6,5 +6,8 @@ type Code = {
 export interface IReportUtilization {
   reportId: string,
   reportName: string,
-  codes: Code[]
+  orderId: string,
+  description: string,
+  createDate: string,
+  codes: Code[],
 }
