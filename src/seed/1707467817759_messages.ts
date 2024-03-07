@@ -10,14 +10,20 @@ export class messages_1707467817759 implements MigrationInterface {
         type: 'INFO',
         messageBody: 'scan code',
         createDate: new Date().toISOString(),
-        resolved: true,
+        resolve: {
+          userId: '2',
+          date: new Date().toISOString(),
+        },
       },
       {
         messageId: '2',
         type: 'ALARM',
         messageBody: 'Printer error',
         createDate: new Date().toISOString(),
-        resolved: true,
+        resolve: {
+          userId: '2',
+          date: new Date().toISOString(),
+        },
       },
     ]
 
