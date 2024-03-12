@@ -3,7 +3,9 @@ import path from 'path'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const url = process.env.MONGODB_URL || 'mongodb://localhost:27017'
+const url: string =
+  `mongodb://${process.env.MONGO_INITDB_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@${process.env.MONGODB_HOST}:${process.env.MONGODB_PORT}` ||
+  'mongodb://localhost:27017'
 const dbName = process.env.MONGODB_NAME || 'l2'
 const runSeeds = !!process.env.RUN_SEEDS || false
 
