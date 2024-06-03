@@ -15,6 +15,7 @@ export class users_08022024_1201_vs implements MigrationInterface {
         password: 'test',
         createDate: new Date().toISOString(),
         lastAuthDate: new Date().toISOString(),
+        blocked: false
       },
     ]
 
