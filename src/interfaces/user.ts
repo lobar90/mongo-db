@@ -8,4 +8,5 @@ export interface IUser {
   password: string
   createDate: string
   lastAuthDate: string
+  blocked: boolean
 }
