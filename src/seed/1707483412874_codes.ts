@@ -10,6 +10,13 @@ export class codes_1707483412874 implements MigrationInterface {
         code: '0104650060854370219Sgwuy93mUV1',
         status: 'NEW',
         type: 'productCodes',
+        history: [
+          {
+            changeDate: new Date().toISOString(),
+            status: 'NEW',
+            description: 'Код напечатан на наклейку',
+        },
+        ]
       },
     ]
 
