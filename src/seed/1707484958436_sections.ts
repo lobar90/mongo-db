@@ -8,6 +8,7 @@ export class sections1707484953300 implements MigrationInterface {
       {
         sectionId: 'section1',
         sectionType: 'serilization',
+        sectionName: 'Участок сериализации',
         businessProcess: '01',
         devices: [
           {
