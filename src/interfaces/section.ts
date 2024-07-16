@@ -1,6 +1,12 @@
+type DeviceInSection = {
+  deviceId: string,
+  deviceType: string,
+}
 
 export interface ISection {
   sectionId: string,
+  sectionType: string,
   sectionName: string,
-  devices: string[]
+  businessProcess: string,
+  devices: DeviceInSection[]
 }
