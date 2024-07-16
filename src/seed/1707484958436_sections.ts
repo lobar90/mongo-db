@@ -7,9 +7,18 @@ export class sections1707484953300 implements MigrationInterface {
     const migrationData: ISection[] = [
       {
         sectionId: 'section1',
-        sectionName: 'Секция 1',
+        sectionType: 'serilization',
+        sectionName: 'Участок сериализации',
+        businessProcess: '01',
         devices: [
-          'printer1'
+          {
+            deviceId: 'printer1',
+            deviceType: 'printer'
+          },
+          {
+            deviceId: 'camera1',
+            deviceType: 'camera'
+          },
         ]
       },
     ]
