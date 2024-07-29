@@ -1,0 +1,22 @@
+stages:
+  - deploy_to_clusterDB_dev
+
+01_deploy_to_clusterDB_dev:
+  stage: deploy_to_clusterDB_dev
+  image: node:18
+  tags:
+    - k8s
+  script:
+    - npm install
+    - npm run migrate
+  when: manual
+
+02_clear_db_clusterDB_dev:
+  stage: deploy_to_clusterDB_dev
+  image: node:18
+  tags:
+    - k8s
+  script:
+    - npm install
+    - npm run down
+  when: manual  
