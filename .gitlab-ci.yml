@@ -18,5 +18,6 @@ stages:
     - k8s
   script:
     - npm install
+    - npm run build
     - npm run down
-  when: manual  
+  when: manual
