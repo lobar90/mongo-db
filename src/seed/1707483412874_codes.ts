@@ -26,7 +26,7 @@ export class codes_1707483412874 implements MigrationInterface {
   public async down(db: Db): Promise<void> {
     await db.collection('codes').deleteMany({
       orderId: {
-        $in: ['testOrderID'],
+        $in: ['testOrderId'],
       },
     })
   }

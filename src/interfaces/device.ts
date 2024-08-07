@@ -4,8 +4,5 @@ export interface IDevice {
   deviceType: string,
   connectionParameters: {
     [key: string]: string
-  },
-  addData: {
-    [key: string]: string
   }
 }
