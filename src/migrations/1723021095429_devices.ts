@@ -1,12 +1,12 @@
 import { Db } from 'mongodb'
-import { MigrationInterface } from 'mongo-migrate-ts'
+import { MigrationInterface } from 'mongo-migrate-ts';
 import { IDevice } from '../interfaces/device'
 
-export class devices1707484953300 implements MigrationInterface {
-  public async up(db: Db): Promise<void> {
+export class devices1723021095429 implements MigrationInterface {
+  public async up(db: Db): Promise<any> {
     const migrationData: IDevice[] = [
       {
-        deviceId: 'printer1',
+        deviceId: '66a36da96fec073d9693cb6d',
         deviceName: 'Printer',
         deviceType: 'printer',
         connectionParameters: {
@@ -15,11 +15,10 @@ export class devices1707484953300 implements MigrationInterface {
         }
       },
     ]
-
     await db.collection('devices').insertMany(migrationData)
   }
 
-  public async down(db: Db): Promise<void> {
+  public async down(db: Db): Promise<any> {
     await db.collection('devices').deleteMany({
       deviceId: {
         $in: ['printer1'],
