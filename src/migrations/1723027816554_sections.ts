@@ -12,7 +12,7 @@ export class sections1723027816554 implements MigrationInterface {
         _id: newId,
         sectionType: 'serilization',
         sectionName: 'Участок сериализации',
-        businessProcess: '01',
+        businessProcess: '11',
         devices: [
           {
             deviceId: '66b36421e2f55043d4ca48df',
