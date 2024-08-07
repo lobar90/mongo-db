@@ -14,7 +14,12 @@ export class sections1707484953300 implements MigrationInterface {
           {
             deviceId: 'printer1',
             deviceType: 'printer'
-          }
+          },
+          {
+            deviceId: 'camera1',
+            deviceType: 'camera'
+          },
+
         ]
       },
     ]
@@ -24,7 +29,7 @@ export class sections1707484953300 implements MigrationInterface {
 
   public async down(db: Db): Promise<void> {
     await db.collection('sections').deleteMany({
-      sectionId: {
+      reportId: {
         $in: ['section1'],
       },
     })
