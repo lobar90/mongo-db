@@ -23,7 +23,6 @@ export class sections1707484953300 implements MigrationInterface {
         ]
       },
     ]
-
     await db.collection('sections').insertMany(migrationData)
   }
 
