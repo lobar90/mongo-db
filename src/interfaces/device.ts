@@ -1,5 +1,7 @@
+import { ObjectId } from 'mongodb';
+
 export interface IDevice {
-  deviceId: string,
+  _id: ObjectId;
   deviceName: string,
   deviceType: string,
   connectionParameters: {
