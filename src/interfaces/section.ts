@@ -1,10 +1,12 @@
+import { ObjectId } from 'mongodb';
+
 type DeviceInSection = {
   deviceId: string,
   deviceType: string,
 }
 
 export interface ISection {
-  sectionId: string,
+  _id: ObjectId,
   sectionType: string,
   sectionName: string,
   businessProcess: string,

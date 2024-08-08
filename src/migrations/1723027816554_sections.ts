@@ -1,18 +1,21 @@
 import { Db } from 'mongodb'
 import { MigrationInterface } from 'mongo-migrate-ts';
 import { ISection } from '../interfaces/section'
+import { ObjectId } from 'mongodb';
 
-export class sections1723021271163 implements MigrationInterface {
+export class sections1723027816554 implements MigrationInterface {
   public async up(db: Db): Promise<any> {
+    const idString = "66b36d03cf1edc304d3adf25";
+    const newId = new ObjectId(idString);
     const migrationData: ISection[] = [
       {
-        sectionId: 'section1',
+        _id: newId,
         sectionType: 'serilization',
         sectionName: 'Участок сериализации',
-        businessProcess: '01',
+        businessProcess: '11',
         devices: [
           {
-            deviceId: '66a36da96fec073d9693cb6d',
+            deviceId: '66b36421e2f55043d4ca48df',
             deviceType: 'printer'
           }
         ]
@@ -22,11 +25,8 @@ export class sections1723021271163 implements MigrationInterface {
     await db.collection('sections').insertMany(migrationData)
   }
 
+
   public async down(db: Db): Promise<any> {
-    await db.collection('sections').deleteMany({
-      sectionId: {
-        $in: ['section1'],
-      },
-    })
+    await db.collection('sections').deleteMany({})
   }
 }
