@@ -7,7 +7,7 @@ export class codes1723209169606 implements MigrationInterface {
     const baseString = '0104650060854370219Sgwuy93';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?';
     const randomChars = Array.from({ length: 5 }, () => characters.charAt(Math.floor(Math.random() * characters.length))).join('');
-    return `${baseString}${randomChars}${index.toString().padStart(5, '0')}`;
+    return `${baseString}${randomChars}`;
   };
   private createMigrationData = (numCodes: number, type: string): ICode[] => {
     const migrationData: ICode[] = [];
